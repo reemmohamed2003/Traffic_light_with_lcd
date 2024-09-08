@@ -4,58 +4,6 @@
  * Created: 8/26/2024 10:57:44 PM
  * Author : Reem Mohamed
  */ 
-/*
-#include <avr/io.h>
-#define F_CPU  8000000UL
-#include <util/delay.h>
-#include "timer.h"
-#include "LED.h"
-#include "LCD.h"
-#include <avr/interrupt.h>
-
-volatile unsigned char counter0=0;
-volatile unsigned char counter1=10;
-volatile unsigned char counter2=5;
-volatile unsigned char counter3=15;
-
-
-int main(void)
-{
-
-  LED_vInit('C',0);
-  LED_vInit('C',1);
-  LED_vInit('C',2);
-  LCD_vInit();
-  timer_CTC_init_interrupt();
-  
-  
-    while (1) 
-    {
-		counter1=10; //led red
-		counter2=5;  //led yellow
-		counter3=15;  //led green
-		//LCD_clearscreen();
-		//LCD_movecursor(1,1);
-		LCD_vSend_string("Count to 10 sec");
-		LED_vTurnOn('C',0);
-		while(counter1>0)
-		{
-			if(counter0>=100)
-			{
-				counter0=0;
-				counter1--;
-				LCD_movecursor(1,10);
-				LCD_vSend_char(' ');
-				LCD_vSend_char((counter1%10)+'0');
-			}
-		}
-		
-		
-		
-		
-    }
-}*/
-
 #include <avr/io.h>
 #include "LCD.h"
 #include "timer.h"
